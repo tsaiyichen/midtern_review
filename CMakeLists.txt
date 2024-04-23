@@ -3,4 +3,7 @@ project(midtern_review)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(midtern_review main.cpp)
+add_executable(main main.cpp)
+add_executable(loop loop.cpp)
+add_executable(selection selection.cpp)
+add_executable(function function.cpp)
