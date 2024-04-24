@@ -8,4 +8,9 @@ loop: <br>
 ![](image/loop.png)<br>
 function: <br>
 ![](image/function.png)<br>
-
+reference: <br>
+![](image/reference.png)<br>
+pointer:<br>
+![](image/pointer.png)<br>
+array<br>
+![](image/array.png)<br>
