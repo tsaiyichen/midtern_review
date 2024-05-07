@@ -1,12 +1,19 @@
 cmake_minimum_required(VERSION 3.28)
-project(midtern_review)
+project(midterm_review)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(main main.cpp)
-add_executable(loop loop.cpp)
-add_executable(selection selection.cpp)
-add_executable(function function.cpp)
-add_executable(reference reference.cpp)
-add_executable(pointer pointer.cpp)
-add_executable(array array.cpp)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set(CMAKE_CURRENT_BINARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+file(GLOB SRC_FILES ${SRC_DIR}/*.cpp)
+
+foreach (SRC_FILE ${SRC_FILES})
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+    get_filename_component(FILE_NAME ${SRC_FILE} NAME_WE)
+    add_executable(${FILE_NAME} ${SRC_FILE})
+    target_include_directories(${FILE_NAME} PRIVATE ${INCLUDE_DIR})
+endforeach ()
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
