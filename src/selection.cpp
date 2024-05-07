@@ -1,11 +1,7 @@
-#include <iostream>
-#include <string>
+#include "selection.h"
 
 using namespace std;
 
-void menu();
-
-void flush();
 
 int main() {
     menu();
