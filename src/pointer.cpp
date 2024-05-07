@@ -1,11 +1,9 @@
+#include "pointer.h"
 #include <iostream>
+
 using namespace std;
 
-int sum(int* a, int* b);
-void swap(int* a, int* b);
-
-int main()
-{
+int main() {
     int a = 1;
     int* ptrA = &a;
 
@@ -25,16 +23,15 @@ int main()
     printf("before swap: num1 = %d, num2 = %d\n", num1, num2);
     swap(ptr1, ptr2);
     printf("after swap: num1 = %d, num2 = %d\n", num1, num2);
-    cout << "call by address can successfully swap two numbers";
+    cout << "call by address can swap two numbers";
 
 }
 
-int sum(int* a, int* b)
-{
+int sum(int* a, int* b) {
     return *a + *b;
 }
-void swap(int* a, int* b)
-{
+
+void swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
     *b = temp;
