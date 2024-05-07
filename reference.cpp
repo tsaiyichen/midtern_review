@@ -1,10 +1,13 @@
 #include <iostream>
+
 using namespace std;
 
-template<typename T> T sum(T a, T b);
-void swap(int& a, int &b);
+template<typename T>
+T sum(T a, T b);
 
-int main(){
+void swap(int& a, int& b);
+
+int main() {
     int a = 100;
     int& refA = a; //refA is another name of a
     cout << "a: " << a << endl;
@@ -26,13 +29,12 @@ int main(){
     cout << "call by reference can successfully swap two numbers";
 }
 
-template<typename T> T sum(T a, T b)
-{
+template<typename T>
+T sum(T a, T b) {
     return a + b;
 }
 
-void swap(int& a, int& b)
-{
+void swap(int& a, int& b) {
     int temp = a;
     a = b;
     b = temp;

@@ -1,30 +1,33 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 void menu();
+
 void flush();
-int main(){
+
+int main() {
     menu();
     char ans;
     cin >> ans;
     flush();
 
     //if-else
-    if(ans == 'a'){
+    if (ans == 'a') {
         cout << "you choose apple." << endl;
-    }else if(ans == 'b'){
+    } else if (ans == 'b') {
         cout << "you choose banana." << endl;
-    }else if(ans == 'c'){
+    } else if (ans == 'c') {
         cout << "you choose cat." << endl;
-    }else if(ans == 'd'){
+    } else if (ans == 'd') {
         cout << "you choose dog." << endl;
-    }else{
+    } else {
         cout << "wrong!" << endl;
     }
 
     //switch case
-    switch(ans){
+    switch (ans) {
         case 'a':
             cout << "you choose apple." << endl;
             break;
@@ -42,15 +45,20 @@ int main(){
     }
 
     //?:
-    string printout = (ans ==  'a') ? "you choose apple." : (ans == 'b') ? "you choose banana." : (ans == 'c') ? "you choose cat." : (ans == 'd') ? "you choose dog." : "wrong";
+    string printout = (ans == 'a') ? "you choose apple." : (ans == 'b') ? "you choose banana." : (ans == 'c')
+                                                                                                 ? "you choose cat."
+                                                                                                 : (ans == 'd')
+                                                                                                   ? "you choose dog."
+                                                                                                   : "wrong";
     cout << printout << endl;
 }
 
-void menu(){
+void menu() {
     cout << "choose: (a)apple, (b)banana, (c)cat, (d)dog: ";
 }
-void flush(){
-    while(cin.get() != '\n'){
+
+void flush() {
+    while (cin.get() != '\n') {
         continue;
     }
 }

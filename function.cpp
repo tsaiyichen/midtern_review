@@ -1,13 +1,17 @@
 #include <iostream>
 
 using namespace std;
+
 int sumInt(int a, int b = 0);
+
 double sumDouble(double a, double b = 0);
-template<typename T> T templateSum(T a, T b = 0); // Template Function
+
+template<typename T>
+T templateSum(T a, T b = 0); // Template Function
 
 void callByValueSwap(int a, int b);
 
-int main(){
+int main() {
     int a = sumInt(5, 8);
     cout << "a: " << a << endl;
     int b = sumInt(7);
@@ -40,19 +44,20 @@ int main(){
     cout << "Therefore, call by value cannot swap two numbers.";
 }
 
-int sumInt(int a, int b){
+int sumInt(int a, int b) {
     return a + b;
 }
 
-double sumDouble(double a, double b){
+double sumDouble(double a, double b) {
     return a + b;
 }
 
-template <typename T> T templateSum(T a, T b){
+template<typename T>
+T templateSum(T a, T b) {
     return a + b;
 }
 
-void callByValueSwap(int a, int b){
+void callByValueSwap(int a, int b) {
     int temp = a;
     a = b;
     b = temp;

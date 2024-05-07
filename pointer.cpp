@@ -1,11 +1,12 @@
 #include <iostream>
+
 using namespace std;
 
 int sum(int* a, int* b);
+
 void swap(int* a, int* b);
 
-int main()
-{
+int main() {
     int a = 1;
     int* ptrA = &a;
 
@@ -29,12 +30,11 @@ int main()
 
 }
 
-int sum(int* a, int* b)
-{
+int sum(int* a, int* b) {
     return *a + *b;
 }
-void swap(int* a, int* b)
-{
+
+void swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
     *b = temp;
