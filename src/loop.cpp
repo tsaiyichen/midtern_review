@@ -30,7 +30,7 @@ int main() {
         num++;
     } while (num <= 100);
 
-    cout << "using do whlie loop: " << total << endl;
+    cout << "using do while loop: " << total << endl;
 
     int count;
     cout << "Enter the end of the loop: ";
